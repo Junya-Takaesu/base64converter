@@ -1,0 +1,57 @@
+$color-neon: yellow;
+
+* {
+  margin: 0;
+  padding: 0;
+  color: rgb(179, 179, 179);
+}
+
+body {
+  background: linear-gradient(to bottom right, rgba(0,0,0,1), rgba(0, 0, 0, 0.733)) no-repeat;
+  // background-size: cover;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10vh;
+  #form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    width: 30vw;
+    height: 40vh;
+
+    padding-top: 5vh;
+
+    textarea {
+      background: linear-gradient(to top left, rgba(0,0,0,0), rgba(0,0,0,1));
+      font-size: 2rem;
+    }
+
+    button {
+      background: linear-gradient(to top left, rgba(0,0,0,0), rgba(0,0,0,1));
+      box-shadow: 0rem 0rem $color-neon, 0rem 0rem 8px $color-neon;
+      border: none;
+      height: 5vh;
+      &:active {
+        text-shadow: 1px 1px black;
+        background: $color-neon;
+        box-shadow: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+  #form {
+    width: 80vw;
+  }
+}
